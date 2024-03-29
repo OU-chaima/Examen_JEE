@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Ajouter un employé</title>
+    <h:outputStylesheet library="webjars" name="bootstrap/5.3.2/css/bootstrap.css"/>
+</h:head>
+<h:body>
+    <div class="container">
+        <h2>Ajouter un employé</h2>
+        <h:form>
+            <div class="form-group">
+                <label for="id">ID :</label>
+                <input type="text" id="id" class="form-control" name="id" />
+            </div>
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" class="form-control" name="name" />
+            </div>
+            <div class="form-group">
+                <label for="skill">Compétence :</label>
+                <input type="text" id="skill" class="form-control" name="skill" />
+            </div>
+            <div class="form-group">
+                <label for="project">Projet :</label>
+                <input type="text" id="project" class="form-control" name="project" />
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </h:form>
+    </div>
+</h:body>
+</html>

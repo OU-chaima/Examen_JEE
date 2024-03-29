@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Datatable</title>
+    <h:outputStylesheet library="webjars" name="bootstrap/5.3.2/css/bootstrap.css"/>
+    <h2>Employe List</h2>
+</h:head>
+<h:body>
+    <h:form>
+        <h:dataTable value="#{empBean.empList}" var="emp" border="1" class="table table-success table-striped">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Id" />
+                </f:facet>
+                <h:outputText value="#{emp.id}"  />
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Name" />
+                </f:facet>
+                <h:outputText value="#{emp.name}" />
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Skill" />
+                </f:facet>
+                <h:outputText value="#{emp.skill}" />
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Project" />
+                </f:facet>
+                <h:outputText value="#{emp.project}" />
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Action</f:facet>
+                <h:commandButton value="remove" action="#{empBean.deleteUser(emp.email)}" class="btn btn-secondary"/>
+            </h:column>
+        </h:dataTable>
+    </h:form>
+</h:body>
+</html>
